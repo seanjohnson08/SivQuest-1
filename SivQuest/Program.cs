@@ -1,39 +1,36 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Console = Colorful.Console;
 
 namespace SivQuest
 {
 
     class Program
     {
-        
-        static void text(string text,)
-        {
-            Console.Write("");
-
-        }
 
         static void Main(string[] args)
         {
             Console.Clear();
-      		Player player = new Player();
-			player.name = "foo";
+            Console.Title = "SivQuest";
+            Console.WindowWidth = 80;
+            Console.BufferWidth = 80;
+            Console.WindowHeight = 25;
+            Console.BufferHeight = 25;
+            Flags flags = new Flags();
+            Text text = new Text(flags);
             string input;
-			string[] gargs;
+            string[] gargs;
+            Console.WriteAscii("   SivQuest", Color.LightBlue);
+            text.write(text.welcome);
 
-            Console.Write("Welcome to SivQuest.\nPlease type your name: ");
-            input = Console.ReadLine();
-			player.name = input;
-			Console.Clear();
-			//Console.ForegroundColor = ;
-			Console.WriteLine("You ");
+            //Console.Clear();
             while (true)
             {
-                
-				input = Console.ReadLine().ToUpper().Trim();
+                input = Console.ReadLine().ToUpper().Trim();
                 gargs = input.Split(' ');
                 switch (input)
                 {
@@ -43,8 +40,8 @@ namespace SivQuest
                     case "WEST":
                         break;
 
-					case "HELP":
-						break;
+                    case "HELP":
+                        break;
 
 
 						
