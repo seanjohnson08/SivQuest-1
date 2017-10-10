@@ -1,4 +1,5 @@
 using Colorful;
+using System.Drawing;
 using Console = Colorful.Console;
 
 namespace SivQuest
@@ -15,13 +16,13 @@ namespace SivQuest
         public string getInput() {
             return Console.ReadLine();
         }
-        public write(string text) {
+        public void write(string text) {
             StyleSheet styleSheet = new StyleSheet(Color.White);
             styleSheet.AddStyle("SivQuest", Color.MediumSlateBlue);
-            Console.WriteStyled(text,Color.Gray,styleSheet);
+            Console.WriteStyled(text, Color.Gray,styleSheet);
         }
-        public writeHeading(String headingText, color = Color.LightBlue) {
-            Console.WriteAscii(headingText, color);
+        public void writeHeading(string headingText) {
+            Console.WriteAscii(headingText);
         }
     }
 }

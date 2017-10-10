@@ -36,7 +36,7 @@ namespace SivQuest
                         break;
 
                     default:
-                        writer.write(String.format("UNKNOWN COMMAND: {0}", input));
+                        writer.write(String.Format("UNKNOWN COMMAND: {0}", input));
                         break;
                 }
 
