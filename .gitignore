@@ -1,3 +1,6 @@
 obj/
 bin/
 *.userprefs
+
+# Ignore NuGet packages, since they can be brought back with package restore
+**/packages/*
